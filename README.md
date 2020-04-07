@@ -9,4 +9,4 @@
 
 * [HTML](https://github.com/linxner/front-end-basics/blob/master/HTML.md)
 * [JS](https://github.com/linxner/front-end-basics/blob/master/JS.md)
-* [CSS]((https://github.com/linxner/front-end-basics/blob/master/CSS.md))
+* [CSS](https://github.com/linxner/front-end-basics/blob/master/CSS.md)
