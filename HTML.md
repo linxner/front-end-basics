@@ -17,25 +17,25 @@
 #### HTML5 新特性
 
 * **新增特性**
-    1. 拖放（drag 和 drop）
-    2. 地理位置 Geolocation
-    3. 多任务 Webworker
-    4. 全双工通信 WebSoket
-    5. 本地存储 LocalStorage、SessionStorage
-    6. 媒体播放 Video、Audio
-    7. 语义化标签 article、footer、header、nav、section
-    8. 跨资源共享（CORS）Access-Control-Allow-Origin
-    9. 绘画 Canvas
-    10. Form Data 对象
-    11. 新增选择器 document.querySelector、document.querySelectorAll
-    12. 离线应用 Manifest
-    13. 桌面通知 Notification
-    14. 表单增强控件 calendar、date、time、email、url、search
-    15. 页面可见性改变事件 Visibilitychange
-    16. 跨窗口通信 postmessage
-    17. 历史管理 history
+  * 拖放（drag 和 drop）
+  * 地理位置 Geolocation
+  * 多任务 Webworker
+  * 全双工通信 WebSoket
+  * 本地存储 LocalStorage、SessionStorage
+  * 媒体播放 Video、Audio
+  * 语义化标签 article、footer、header、nav、section
+  * 跨资源共享（CORS）Access-Control-Allow-Origin
+  * 绘画 Canvas
+  * Form Data 对象
+  * 新增选择器 document.querySelector、document.querySelectorAll
+  * 离线应用 Manifest
+  * 桌面通知 Notification
+  * 表单增强控件 calendar、date、time、email、url、search
+  * 页面可见性改变事件 Visibilitychange
+  * 跨窗口通信 postmessage
+  * 历史管理 history
 
 * **删除特性**
-
-    1. 纯表现元素： basefont、big、center、font、s、strike、tt、u
-    2. 对可用性产生负面影响的元素： frame、frameset、noframes
+  * 纯表现元素： basefont、big、center、font、s、strike、tt、u
+  * 对可用性产生负面影响的元素： frame、frameset、noframes
+  
