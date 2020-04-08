@@ -25,9 +25,9 @@
   * 在需要清除浮动的元素添加
 
     ```css
-        .clearfix{
-            clear: both;
-        }
+    .clearfix{
+        clear: both;
+    }
     ```
 
   * 利用伪元素
@@ -44,7 +44,7 @@
   * 利用空元素,在需要清除浮动的后面添加空元素
 
     ```css
-        .clearfix{
-            clear: both;
-        }
+    .clearfix{
+        clear: both;
+    }
     ```

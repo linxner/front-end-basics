@@ -2,14 +2,14 @@
 
 ### 基本数据类型和引用数据类型
 
-* 基本数据类型：undefined、null、boolean、number、symbol、string。
-* 引用数据类型：object、array、function。
+* 基本数据类型：`undefined`、`null`、`boolean`、`number`、`symbol`、`string`。
+* 引用数据类型：`object`、`array`、`function`。
 
 ### JavaScript 中的作用域与变量声明提升
 
-* 在 JavaScript 中，作用域为 function(){}内的区域，称为函数作用域。
+* 在`JavaScript`中，作用域为`function(){}`内的区域，称为函数作用域。
 * JavaScript 变量声明提升
-  * 在 JavaScript 中，函数声明与变量声明经常被 JavaScript 引擎隐式地提升到当前作用域的顶部。
+  * 在`JavaScript`中，函数声明与变量声明经常被`JavaScript`引擎隐式地提升到当前作用域的顶部。
   * 声明语句中的赋值部分并不会被提升，只有名称被提升。
   * 函数声明的优先级高于变量，如果变量名跟函数名相同且未赋值，则函数声明会覆盖变量声明。
   * 如果函数有多个同名参数，那么最后一个参数（即使没有定义）会覆盖前面的同名参数。
