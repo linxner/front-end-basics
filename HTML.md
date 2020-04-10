@@ -121,3 +121,13 @@ srcset 是一个包含一个或多个源图的源图容器，不同源图用逗�
 ```
 
 上述例子的意思是：对于`viewport`在`500px`及以下的使用`500w`的图片，以此类推，最后一个是前面的媒体查询都不符合的情况下使用`2000w`的图片。
+
+`<picture>`元素通过包含零或多个`<source>`元素和一个`<img>`元素来为不同的显示/设备场景提供图像版本。浏览器会选择最匹配的子`<source>`元素，如果没有匹配的，就选择`<img>`元素的`src`属性中的`URL`。然后，所选图像呈现在`<img>`元素占据的空间中。
+
+```html
+<picture>
+    <source srcset="/media/examples/surfer-240-200.jpg"
+            media="(min-width: 800px)">
+    <img src="/media/examples/painted-hand-298-332.jpg" />
+</picture>
+```
