@@ -13,10 +13,8 @@
   + BFC在计算高度的时候，内部浮动元素的高度也要计算在内。也就是说，即使BFC区域内只有一个浮动元素，BFC的高度也不会发生塌缩，高度是大于等于浮动元素的高度的。
   + HTML结构中，当构建BFC区域的元素紧接着一个浮动盒子时，即，是该浮动盒子的兄弟节点，BFC区域会首先尝试在浮动盒子的旁边渲染，但若宽度不够，就在浮动元素的下方渲染。
 * 设置方式：
-  + `inline-block` 
+  + `display:inline-block|table-cell|table-caption|flex|inline-flex。` 
   + `overflow` 除 `visible` 以为的其他属性
-  + `table-cell` 
-  + `table-caption` 
 
 ### 清除浮动
 
@@ -58,4 +56,49 @@
 ```
 
 ### flex（伸缩盒）属性用法
+
+`flex` 容器中存在两条轴， 横轴和纵轴， 容器中的每个单元称为 `flex item` 
+在容器上可以设置6个属性：
+
+* flex-direction
+* flex-wrap
+* flex-flow
+* justify-content
+* align-items
+* align-content
+
+注意：当设置 flex 布局之后，子元素的 float、clear、vertical-align 的属性将会失效。
+
+有六种属性可运用在子元素上:
+
+* order
+* flex-basis
+* flex-grow
+* flex-shrink
+* flex
+* align-self
+
+### position 各个定位属性有什么区别？
+
+* `static` ：默认定位属性值。该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 `top` , `right` , `bottom` , `left` 和 `z-index` 属性无效。
+* `relative` ：该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。
+* `absolute` ：不为元素预留空间，通过指定元素相对于最近的非 `static` 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（ `margins` ），且不会与其他边距合并。
+* `fixed` ：不为元素预留空间，而是通过指定元素相对于屏幕视口（ `viewport` ）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。 `fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform` 属性非 `none` 时，容器由视口改为该祖先。
+* `sticky` ：盒位置根据正常流计算(这称为正常流动中的位置)，然后相对于该元素在流中的 `flow root（BFC）` 和 `containing block` （最近的块级祖先元素）定位。在所有情况下（即便被定位元素为 `table` 时），该元素定位均不对后续元素造成影响。当元素 `B` 被粘性定位时，后续元素的位置仍按照 `B` 未定位时的位置来确定。 `position: sticky` 对 `table` 元素的效果与 `position: relative` 相同。
+
+### 利用伪元素画三角
+
+``` css
+.info-tab {
+    position: relative;
+}
+
+.info-tab::after {
+    content: '';
+    border: 4px solid transparent;
+    border-top-color: #2c8ac2;
+    position: absolute;
+    top: 0;
+}
+```
 
