@@ -24,8 +24,6 @@
 
   + 在需要清除浮动的元素添加
 
-    
-
 ``` css
     .clearfix {
         clear: both;
@@ -33,8 +31,6 @@
 ```
 
   + 利用伪元素
-
-    
 
 ``` css
     .clearfix:after {
@@ -47,11 +43,17 @@
 
   + 利用空元素, 在需要清除浮动的后面添加空元素
 
-    
-
 ``` css
     .clearfix {
         clear: both;
+    }
+```
+
+  + 利用 `overflow: hidden;` 
+
+``` css
+    .clearfix {
+        overflow: hidden;
     }
 ```
 
@@ -69,7 +71,7 @@
 
 注意：当设置 flex 布局之后，子元素的 float、clear、vertical-align 的属性将会失效。
 
-有六种属性可运用在子元素上:
+有六种属性可运用在项目上:
 
 * order
 * flex-basis
