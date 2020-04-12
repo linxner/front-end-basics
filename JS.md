@@ -72,3 +72,101 @@ function deepCopy(s) {
 }
 ```
 
+### 函数防抖和函数节流
+
+* 函数防抖
+
+>> 在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+
+``` js
+//模拟一段ajax请求
+function ajax(content) {
+    console.log('ajax request ' + content)
+}
+
+function debounce(fun, delay) {
+    let timer;
+    return function(...args) {
+        let that = this
+        clearTimeout(timer)
+        timer = setTimeout(function() {
+            fun.call(that, args)
+        }, delay)
+    }
+}
+
+let inputb = document.getElementById('debounce')
+
+let debounceAjax = debounce(ajax, 500)
+
+inputb.addEventListener('keyup', function(e) {
+    debounceAjax(e.target.value)
+})
+```
+
+* 函数节流
+
+>> 规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。
+
+``` js
+function throttle(fun, delay) {
+    let last, deferTimer
+    return function(...args) {
+        let that = this
+        let now = Date.now()
+        if (last && now < last + delay) {
+            clearTimeout(deferTimer)
+            deferTimer = setTimeout(function() {
+                last = now
+                fun.call(that, args)
+            }, delay)
+        } else {
+            last = now
+            fun.call(that, args)
+        }
+    }
+}
+
+let throttleAjax = throttle(ajax, 1000)
+
+let inputc = document.getElementById('throttle')
+inputc.addEventListener('keyup', function(e) {
+    throttleAjax(e.target.value)
+})
+```
+
+### call、apply 和 bind 的区别
+
+这三个函数的作用都是改变函数执行时的上下文，再具体一点就是改变函数运行时的this指向。
+
+``` js
+  let obj = {
+      name: 'tony'
+  };
+
+  function Say(name) {
+      this.name = name;
+  }
+
+  Say.prototype.sayName = function() {
+      console.log(this.name);
+  }
+
+  var say = new Say('thomas');
+  say.sayName(); // thomas
+
+  //  call,apply,bind使用
+  say.sayName.call(obj);
+  say.sayName.apply(obj);
+  let bind = say.sayName.bind(obj); // 返回一个函数
+  bind(); // tony
+```
+
+`call` 、 `apply` 与 `bind` 的差别：
+
+>> `call` 和 `apply` 改变了函数的 `this` 上下文后便执行该函数, 而bind则是返回改变了上下文后的一个函数。
+
+`call` 、 `apply` 的区别
+
+>> 他们俩之间的差别在于参数的区别， `call` 和 `apply` 的第一个参数都是要改变上下文的对象，而 `call` 从第二个参数开始以参数列表的形式展现， `apply` 则是把除了改变上下文对象的参数放在一个数组里面作为它的第二个参数。
+
