@@ -177,3 +177,65 @@ inputc.addEventListener('keyup', function(e) {
 * 将步骤1新创建的对象作为 `this` 的上下文 ；
 * 如果该函数没有返回对象，则返回 `this` 。
 
+### 函数柯里化
+
+``` js
+var curring = function(fn) {
+    var _args = [];
+    return function cb() {
+
+        if (arguments.length === 0) {
+            return fn.apply(this, _args);
+        }
+
+        Array.prototype.push.apply(_args, [].slice.call(arguments));
+
+        return cb;
+    }
+}
+
+var multi = function() {
+
+    var total = 0;
+    var argsArray = Array.prototype.slice.call(arguments);
+    argsArray.forEach(function(item) {
+        total += item;
+    })
+
+    return total
+};
+
+var calc = curring(multi);
+
+calc(1, 2)(3)(4, 5, 6);
+
+console.log(calc()); //空白调用时才真正计算
+```
+
+### 判断js对象为空
+
+``` js
+function isEmpty(obj) {
+    if (Object.keys(obj).length) {
+        return false
+    } else {
+        return true
+    }
+}
+
+function isEmpty(obj) {
+    for (let i in obj) {
+        return false
+    }
+    return true
+}
+
+function isEmpty(obj) {
+    if (JSON.stringify(obj) === '{}') {
+        return true
+    } else {
+        return false
+    }
+}
+```
+

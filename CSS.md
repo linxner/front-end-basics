@@ -104,3 +104,41 @@
 }
 ```
 
+### 三栏布局
+
+``` html
+<div class="wrap">
+    <div class="left">左侧</div>
+    <div class="right">右侧</div>
+    <div class="middle">中间</div>
+</div>
+
+<style type="text/css">
+    .wrap {
+        background: #eee;
+        overflow: hidden;
+        padding: 20px;
+    }
+
+    .left {
+        width: 200px;
+        height: 50px;
+        float: left;
+        background: coral;
+    }
+
+    .right {
+        width: 120px;
+        height: 200px;
+        float: right;
+        background: lightblue;
+    }
+
+    .middle {
+        margin-left: 220px;
+        background: lightpink;
+        margin-right: 140px;
+    }
+</style>
+```
+
