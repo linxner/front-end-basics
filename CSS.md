@@ -60,25 +60,25 @@
 ### flex（伸缩盒）属性用法
 
 `flex` 容器中存在两条轴， 横轴和纵轴， 容器中的每个单元称为 `flex item` 
-在容器上可以设置6个属性：
+在容器上可以设置 `6` 个属性：
 
-* flex-direction
-* flex-wrap
-* flex-flow
-* justify-content
-* align-items
-* align-content
+* `flex-direction: row | row-reverse | column | column-reverse` 决定主轴的方向（即项目的排列方向）；
+* `flex-wrap: nowrap | wrap | wrap-reverse;` 定义如果一条轴线排不下，如何换行；
+* `flex-flow: <flex-direction> || <flex-wrap>;`  `flex-direction` 属性和 `flex-wrap` 属性的简写形式，默认值为 `row nowrap` ；
+* `justify-content: flex-start | flex-end | center | space-between | space-around;` 定义项目在主轴上的对齐方式；
+* `align-items: flex-start | flex-end | center | baseline | stretch;` 定义项目在交叉轴上如何对齐
+* `align-content: flex-start | flex-end | center | space-between | space-around | stretch;` 定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
 
-注意：当设置 flex 布局之后，子元素的 float、clear、vertical-align 的属性将会失效。
+注意：当设置 `flex` 布局之后，子元素的 `float、clear、vertical-align` 的属性将会失效。
 
-有六种属性可运用在项目上:
+有 `6` 种属性可运用在项目上:
 
-* order
-* flex-basis
-* flex-grow
-* flex-shrink
-* flex
-* align-self
+* `order: <integer>;` 定义项目的排列顺序。数值越小，排列越靠前，默认为 `0` 。
+* `flex-grow: <number>; /* default 0 */` 定义项目的放大比例，默认为 `0` ，即如果存在剩余空间，也不放大。
+* `flex-basis: <length> | auto; /* default auto */` 定义了在分配多余空间之前，项目占据的主轴空间（ `main size` ）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为 `auto` ，即项目的本来大小。
+* `flex-shrink: <number>; /* default 1 */` 定义了项目的缩小比例，默认为 `1` ，即如果空间不足，该项目将缩小。
+* `flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];`  `flex-grow` , `flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 1 auto` 。后两个属性可选。
+* `align-self: auto | flex-start | flex-end | center | baseline | stretch;` 允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto` ，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch` 。
 
 ### position 各个定位属性有什么区别？
 
