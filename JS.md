@@ -1,11 +1,27 @@
 ## JS
 
+* [基本数据类型和引用数据类型](#anchor1)
+* [`JavaScript` 中的作用域与变量声明提升](#anchor2)
+* [`let`、`const` 与 `var` 的区别](#anchor3)
+* [`defer` 和 `async` 的区别](#anchor4)
+* [对象浅拷贝和深拷贝有什么区别](#anchor5)
+* [怎么实现对象深拷贝](#anchor6)
+* [函数防抖和函数节流](#anchor7)
+* [`call`、`apply` 和 `bind` 的区别](#anchor8)
+* [`new` 运算符做了什么](#anchor9)
+* [函数柯里化](#anchor10)
+* [判断js对象为空](#anchor11)
+
+<span id="anchor1"></span>
+
 ### 基本数据类型和引用数据类型
 
 * 基本数据类型： `undefined` 、 `null` 、 `boolean` 、 `number` 、 `symbol` 、 `string` 。
 * 引用数据类型： `object` 、 `array` 、 `function` 。
 
-### JavaScript 中的作用域与变量声明提升
+<span id="anchor2"></span>
+
+### `JavaScript` 中的作用域与变量声明提升
 
 * 在 `JavaScript` 中，作用域为 `function(){}` 内的区域，称为函数作用域。
 * `JavaScript` 变量声明提升
@@ -14,15 +30,21 @@
   + 函数声明的优先级高于变量，如果变量名跟函数名相同且未赋值，则函数声明会覆盖变量声明。
   + 如果函数有多个同名参数，那么最后一个参数（即使没有定义）会覆盖前面的同名参数。
 
-### let、const 与 var 的区别
+<span id="anchor3"></span>
+
+### `let`、`const` 与 `var` 的区别
 
 * 变量提升
 * 块级作用域 
 
-### defer 和 async 的区别
+<span id="anchor4"></span>
+
+### `defer` 和 `async` 的区别
 
 * defer：浏览器指示脚本在文档被解析后执行，script被异步加载后并不会立刻执行，而是等待文档被解析完毕后执行。
 * async：同样是异步加载脚本，区别是脚本加载完毕后立即执行，这导致async属性下的脚本是乱序的，对于script有先后依赖关系的情况，并不适用。
+
+<span id="anchor5"></span>
 
 ### 对象浅拷贝和深拷贝有什么区别
 
@@ -43,6 +65,8 @@ console.log(o1.a) // 3
 ```
 
 而浅拷贝和深拷贝就是在这个基础之上做的区分，如果在拷贝这个对象的时候，只对基本数据类型进行了拷贝，而对引用数据类型只是进行了引用的传递，而没有重新创建一个新的对象，则认为是浅拷贝。反之，在对引用数据类型进行拷贝的时候，创建了一个新的对象，并且复制其内的成员变量，则认为是深拷贝。
+
+<span id="anchor6"></span>
 
 ### 怎么实现对象深拷贝
 
@@ -71,6 +95,7 @@ function deepCopy(s) {
     return d
 }
 ```
+<span id="anchor7"></span>
 
 ### 函数防抖和函数节流
 
@@ -134,8 +159,9 @@ inputc.addEventListener('keyup', function(e) {
     throttleAjax(e.target.value)
 })
 ```
+<span id="anchor8"></span>
 
-### call、apply 和 bind 的区别
+### `call`、`apply` 和 `bind` 的区别
 
 这三个函数的作用都是改变函数执行时的上下文，再具体一点就是改变函数运行时的this指向。
 
@@ -170,12 +196,16 @@ inputc.addEventListener('keyup', function(e) {
 
 > 他们俩之间的差别在于参数的区别， `call` 和 `apply` 的第一个参数都是要改变上下文的对象，而 `call` 从第二个参数开始以参数列表的形式展现， `apply` 则是把除了改变上下文对象的参数放在一个数组里面作为它的第二个参数。
 
-### new 运算符做了什么
+<span id="anchor9"></span>
+
+### `new` 运算符做了什么
 
 * 创建一个空的简单 `JavaScript` 对象（即{}）；
 * 链接该对象（即设置该对象的构造函数）到另一个对象 ；
 * 将步骤1新创建的对象作为 `this` 的上下文 ；
 * 如果该函数没有返回对象，则返回 `this` 。
+
+<span id="anchor10"></span>
 
 ### 函数柯里化
 
@@ -211,6 +241,8 @@ calc(1, 2)(3)(4, 5, 6);
 
 console.log(calc()); //空白调用时才真正计算
 ```
+
+<span id="anchor11"></span>
 
 ### 判断js对象为空
 

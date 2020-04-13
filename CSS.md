@@ -1,10 +1,22 @@
 ## CSS
 
-### float 是怎么工作的
+* [ `float` 是怎么工作的](#anchor1)
+* [块级格式化上下文(BFC)](#anchor2)
+* [清除浮动](#anchor3)
+* [ `flex` （伸缩盒）属性用法](#anchor4)
+* [ `position` 各个定位属性有什么区别？](#anchor5)
+* [利用伪元素画三角](#anchor6)
+* [三栏布局](#anchor7)
+
+<span id="anchor1"></span>
+
+### `float` 是怎么工作的
 
 * `float` 是 `CSS` 定位属性，指定一个元素应沿其容器的左侧或右侧放置，与 `position: absolute;` 从页面流中删除元素不同，浮动元素仍然是页面流的一部分，并且会影响其他元素的位置（例如，文本将在浮动元素周围流动）。
 
-### 块级格式化上下文
+<span id="anchor2"></span>
+
+### 块级格式化上下文(BFC)
 
 * 是 `Web` 页面的可视化 `CSS` 渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。
 * 块格式化上下文（BFC）有下面几个特点：
@@ -15,6 +27,8 @@
 * 设置方式：
   + `display:inline-block|table-cell|table-caption|flex|inline-flex。` 
   + `overflow` 除 `visible` 以为的其他属性
+
+<span id="anchor3"></span>
 
 ### 清除浮动
 
@@ -57,7 +71,9 @@
     }
 ```
 
-### flex（伸缩盒）属性用法
+<span id="anchor4"></span>
+
+### `flex` （伸缩盒）属性用法
 
 `flex` 容器中存在两条轴， 横轴和纵轴， 容器中的每个单元称为 `flex item` 
 在容器上可以设置 `6` 个属性：
@@ -80,13 +96,17 @@
 * `flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ];`  `flex-grow` , `flex-shrink` 和 `flex-basis` 的简写，默认值为 `0 1 auto` 。后两个属性可选。
 * `align-self: auto | flex-start | flex-end | center | baseline | stretch;` 允许单个项目有与其他项目不一样的对齐方式，可覆盖 `align-items` 属性。默认值为 `auto` ，表示继承父元素的 `align-items` 属性，如果没有父元素，则等同于 `stretch` 。
 
-### position 各个定位属性有什么区别？
+<span id="anchor5"></span>
+
+### `position` 各个定位属性有什么区别？
 
 * `static` ：默认定位属性值。该关键字指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 `top` , `right` , `bottom` , `left` 和 `z-index` 属性无效。
 * `relative` ：该关键字下，元素先放置在未添加定位时的位置，再在不改变页面布局的前提下调整元素位置（因此会在此元素未添加定位时所在位置留下空白）。
 * `absolute` ：不为元素预留空间，通过指定元素相对于最近的非 `static` 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（ `margins` ），且不会与其他边距合并。
 * `fixed` ：不为元素预留空间，而是通过指定元素相对于屏幕视口（ `viewport` ）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变。打印时，元素会出现在的每页的固定位置。 `fixed` 属性会创建新的层叠上下文。当元素祖先的 `transform` 属性非 `none` 时，容器由视口改为该祖先。
 * `sticky` ：盒位置根据正常流计算(这称为正常流动中的位置)，然后相对于该元素在流中的 `flow root（BFC）` 和 `containing block` （最近的块级祖先元素）定位。在所有情况下（即便被定位元素为 `table` 时），该元素定位均不对后续元素造成影响。当元素 `B` 被粘性定位时，后续元素的位置仍按照 `B` 未定位时的位置来确定。 `position: sticky` 对 `table` 元素的效果与 `position: relative` 相同。
+
+<span id="anchor6"></span>
 
 ### 利用伪元素画三角
 
