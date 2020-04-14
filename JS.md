@@ -269,5 +269,6 @@ function isEmpty(obj) {
         return false
     }
 }
+
 ```
 
