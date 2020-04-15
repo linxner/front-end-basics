@@ -8,3 +8,4 @@
 * [JS](https://github.com/linxner/front-end-basics/blob/master/JS.md)
 * [CSS](https://github.com/linxner/front-end-basics/blob/master/CSS.md)
 * [浏览器知识](https://github.com/linxner/front-end-basics/blob/master/浏览器知识.md)
+* [Vue](https://github.com/linxner/front-end-basics/blob/master/Vue.md)
