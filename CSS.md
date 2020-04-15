@@ -39,36 +39,36 @@
   + 在需要清除浮动的元素添加
 
 ``` css
-    .clearfix {
-        clear: both;
-    }
+.clearfix {
+    clear: both;
+}
 ```
 
   + 利用伪元素
 
 ``` css
-    .clearfix:after {
-        content: '.';
-        height: 0;
-        display: block;
-        clear: both;
-    }
+.clearfix:after {
+    content: '.';
+    height: 0;
+    display: block;
+    clear: both;
+}
 ```
 
   + 利用空元素, 在需要清除浮动的后面添加空元素
 
 ``` css
-    .clearfix {
-        clear: both;
-    }
+.clearfix {
+    clear: both;
+}
 ```
 
   + 利用 `overflow: hidden;` 
 
 ``` css
-    .clearfix {
-        overflow: hidden;
-    }
+.clearfix {
+    overflow: hidden;
+}
 ```
 
 <span id="anchor4"></span>
@@ -85,7 +85,7 @@
 * `align-items: flex-start | flex-end | center | baseline | stretch;` 定义项目在交叉轴上如何对齐
 * `align-content: flex-start | flex-end | center | space-between | space-around | stretch;` 定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
 
-注意：当设置 `flex` 布局之后，子元素的 `float、clear、vertical-align` 的属性将会失效。
+> 注意：当设置 `flex` 布局之后，子元素的 `float、clear、vertical-align` 的属性将会失效。
 
 有 `6` 种属性可运用在项目上:
 
@@ -123,6 +123,7 @@
     top: 0;
 }
 ```
+
 <span id="anchor7"></span>
 
 ### 三栏布局
