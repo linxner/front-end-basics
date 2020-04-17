@@ -272,3 +272,6 @@ function isEmpty(obj) {
 
 ```
 
+### `Promise` 简介
+
+
