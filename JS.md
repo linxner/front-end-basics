@@ -11,6 +11,7 @@
 * [`new` 运算符做了什么](#anchor9)
 * [函数柯里化](#anchor10)
 * [判断js对象为空](#anchor11)
+* [`Promise` 简介](#anchor12)
 
 <span id="anchor1"></span>
 
