@@ -64,3 +64,8 @@
    + `Action` ：用于提交 `mutation` ，而不是直接变更状态，可以包含任意异步操作。
    + `Module` ：允许将单一的 `Store` 拆分为多个 `store` 且同时保存在单一的状态树中。
 
+### Vue原理阐述
+
+vue是采用数据劫持配合发布-订阅者模式的方式，通过Object.defineProperty来劫持各个属性的getter和setter，在数据变动时，发布消息给依赖收集器并通知观察者Watcher，调用对应的回调去更新视图。
+
+MVVM做为绑定的入口，整合Observer，Compiler和Watcher三者，通过Observer监听model数据变化表，通过Compiler来解析编译模版指令，最终利用Watcher搭起Observer以及Compiler之间的通信桥梁，达到数据变化=>视图更新；视图交互变化=>数据model变更的双向绑定效果。
