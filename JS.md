@@ -274,7 +274,9 @@ function isEmpty(obj) {
 ```
 
 ### `Promise` 实现
-<a href='../test/promise.js'>点击跳转查看</a>
+<a href='https://github.com/linxner/front-end-basics/blob/master/test/promise.js'>点击跳转查看</a>
+
+
 ### 如何准确判断一个变量的类型
 
 1. typeof: 当`typeof` 运算符用于判断变量的类型，但是对于一些创建的对象，它们都会返回`object`，判断基本类型时可用。
