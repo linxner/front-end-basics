@@ -11,7 +11,7 @@
 * [`new` 运算符做了什么](#anchor9)
 * [函数柯里化](#anchor10)
 * [判断js对象为空](#anchor11)
-* [`Promise` 简介](#anchor12)
+* [`Promise` 实现](#anchor12)
 
 <span id="anchor1"></span>
 
@@ -273,8 +273,18 @@ function isEmpty(obj) {
 
 ```
 
-### `Promise` 简介
+### `Promise` 实现
 
+### 如何准确判断一个变量的类型
 
+1. typeof: 当`typeof` 运算符用于判断变量的类型，但是对于一些创建的对象，它们都会返回`object`，判断基本类型时可用。
+2. instanceof: instanceof判断的前提条件是需要知道变量的类型，
+
+```js
+    const myDate=new Date(); 
+    console.log(myDate instanceof Date) // true
+```
+
+3. Object.prototype.toString.call: 可精确得到变量的类型
 
 

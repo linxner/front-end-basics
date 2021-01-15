@@ -22,6 +22,7 @@ class MPromise {
         this.reason = reason;
         this.status = MPromise.rejected;
         this.callbacks.forEach(cb => this._handler(cb))
+        console.log('bbb');
     }
 
     _handler(cb) {
