@@ -12,6 +12,10 @@
 * [函数柯里化](#anchor10)
 * [判断js对象为空](#anchor11)
 * [`Promise` 实现](#anchor12)
+* [如何准确判断一个变量的类型](#anchor13)
+* [`bind`函数实现](#anchor14)
+* [发布订阅模式原理实现](#anchor15)
+* [如何将对象数组映射为对象](#anchor16)
 
 <span id="anchor1"></span>
 
@@ -272,10 +276,12 @@ function isEmpty(obj) {
 }
 
 ```
+<span id="anchor12"></span>
 
 ### `Promise` 实现
 <a href='https://github.com/linxner/front-end-basics/blob/master/test/promise.js'>点击跳转查看</a>
 
+<span id="anchor13"></span>
 
 ### 如何准确判断一个变量的类型
 
@@ -289,14 +295,18 @@ function isEmpty(obj) {
 
 3. Object.prototype.toString.call: 可精确得到变量的类型
 
-### bind函数实现
+<span id="anchor14"></span>
+
+### `bind`函数实现
 <a href='https://github.com/linxner/front-end-basics/blob/master/test/bind.js'>点击跳转查看</a>
 
+<span id="anchor15"></span>
 
 ### 发布订阅模式原理实现
 
 <a href='https://github.com/linxner/front-end-basics/blob/master/test/EventBus.js'>点击跳转查看</a>
 
+<span id="anchor16"></span>
 
 ### 如何将对象数组映射为对象
 <a href='https://github.com/linxner/front-end-basics/blob/master/test/transform.js'>点击跳转查看</a>
