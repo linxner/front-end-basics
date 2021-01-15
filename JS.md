@@ -289,4 +289,16 @@ function isEmpty(obj) {
 
 3. Object.prototype.toString.call: 可精确得到变量的类型
 
+### bind函数实现
+<a href='https://github.com/linxner/front-end-basics/blob/master/test/bind.js'>点击跳转查看</a>
+
+
+### 发布订阅模式原理实现
+
+<a href='https://github.com/linxner/front-end-basics/blob/master/test/EventBus.js'>点击跳转查看</a>
+
+
+### 如何将对象数组映射为对象
+<a href='https://github.com/linxner/front-end-basics/blob/master/test/transform.js'>点击跳转查看</a>
+
 
